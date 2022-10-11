@@ -10922,6 +10922,26 @@ nav ul li a:hover {
 .w3l-main-slider .banner-top3 {
   background: url(../images/banner4.jpg) no-repeat center;
   background-size: cover; }
+.w3l-main-slider .banner-top4 {
+  background: url(../images/spa1.jpg) no-repeat center;
+  background-size: cover; }
+.w3l-main-slider .banner-top5 {
+    background: url(../images/spa2.jpg) no-repeat center;
+    background-size: cover;
+}
+.w3l-main-slider .banner-top6 {
+    background: url(../images/spa3.jpg) no-repeat center;
+    background-size: cover;
+}
+.w3l-main-slider .banner-top7 {
+    background: url(../images/spa5.jpg) no-repeat center;
+    background-size: cover;
+}
+.w3l-main-slider .banner-top8 {
+    background: url(../images/banner5.jpg) no-repeat center;
+    background-size: cover;
+}
+
 
 .w3l-main-slider .banner-view:before {
   content: "";
