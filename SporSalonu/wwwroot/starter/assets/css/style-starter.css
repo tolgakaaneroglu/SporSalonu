@@ -10934,7 +10934,7 @@ nav ul li a:hover {
     background-size: cover;
 }
 .w3l-main-slider .banner-top7 {
-    background: url(../images/spa5.jpg) no-repeat center;
+    background: url(../images/banner5.jpg) no-repeat center;
     background-size: cover;
 }
 .w3l-main-slider .banner-top8 {
@@ -12110,6 +12110,7 @@ a.page-link.page-number:focus {
   background-size: cover;
   position: relative;
   z-index: 1; }
+
 
 .w3l-breadcrumb .breadcrumb-bg-about:before,
 .w3l-breadcrumb .breadcrumb-bg-blog:before,
