@@ -10934,13 +10934,13 @@ nav ul li a:hover {
     background-size: cover;
 }
 .w3l-main-slider .banner-top7 {
-    background: url(../images/spa5.jpg) no-repeat center;
-    background-size: cover;
-}
-.w3l-main-slider .banner-top8 {
     background: url(../images/banner5.jpg) no-repeat center;
     background-size: cover;
 }
+/*.w3l-main-slider .banner-top8 {
+    background: url(../images/.jpg) no-repeat center;
+    background-size: cover;
+}*/
 
 
 .w3l-main-slider .banner-view:before {
@@ -12110,11 +12110,17 @@ a.page-link.page-number:focus {
   background-size: cover;
   position: relative;
   z-index: 1; }
+.w3l-breadcrumb .breadcrumb-bg-spa {
+  background: url(../images/spa1.jpg) no-repeat top;
+  background-size: cover;
+  position: relative;
+  z-index: 1; }
 
 .w3l-breadcrumb .breadcrumb-bg-about:before,
 .w3l-breadcrumb .breadcrumb-bg-blog:before,
 .w3l-breadcrumb .breadcrumb-bg-contact:before,
 .w3l-breadcrumb .breadcrumb-bg-classes:before,
+.w3l-breadcrumb .breadcrumb-bg-spa:before, 
 .w3l-breadcrumb .breadcrumb-bg-error:before {
   content: "";
   background: rgba(21, 17, 17, 0.55);
