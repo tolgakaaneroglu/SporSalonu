@@ -112,8 +112,8 @@
         </div>
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="admin-blog.html" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Blog Ekle</a>
-            <a href="admin-duyuru.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>Duyuru Ekle</a>
+            <a href="admin-blog.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Blog Ekle</a>
+            <a href="admin-duyuru.html" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-eye fa-fw"></i>Duyuru Ekle</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
@@ -131,65 +131,49 @@
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
-        <h2>Blog Ekle</h2>
+        <h2>Duyuru Ekleme</h2>
 
         <div class="container">
             <form action="/action_page.php">
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">Başlık</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="Başlık">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Yazar Adı</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="Adınız">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Yazar Soyadı</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="Soyadınız">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Blog Yazınız</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Yazınız" style="height:200px"></textarea>
-                    </div>
-                </div>
                
                 <div class="row">
-                    <input type="submit" value="Blog Ekle">
-                </div>
+                    <div class="col-25">
+                        <label for="birthdaytime">Tarih</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                        </div>
+                    </div>
+                    <div class="row">
 
-                <div>
-                    <h3>Fotoğraf 1</h3>
-                    <input type="file" accept="application/pdf" />
 
-                    <h3>Fotoğraf 2</h3>
-                    <input type="file" accept="application/pdf" />
+                    </div>
+                    <div class="row">
 
-                    <h3>Fotoğraf 3</h3>
-                    <input type="file" accept="application/pdf" />
 
-                    <h3>Fotoğraf 4</h3>
-                    <input type="file" accept="application/pdf" />
-                </div>
-            </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Duyuru</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Duyuru giriniz.." style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input type="submit" value="Gönder">
+                    </div>
+                    <div>
+                        <h3>Bir PDF ekleyiniz</h3>
+                        <input type="file" accept="application/pdf" />
+                    </div>
+</form>
         </div>
         <!-- Footer -->
-       
+        <footer class="w3-container w3-padding-16 w3-light-grey">
+            <h4></h4>
+        </footer>
 
         <!-- End page content -->
     </div>
