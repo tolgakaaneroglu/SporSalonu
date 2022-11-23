@@ -15,6 +15,54 @@ Author URL: http://w3layouts.com
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
 <body>
     <!--header-->
@@ -63,7 +111,7 @@ Author URL: http://w3layouts.com
                                 <a class="dropdown-item" href="yogaclasses.html">Yoga</a>
                             </div>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item @@contact__active">
                             <a class="nav-link" href="contact.html">İletişim</a>
                         </li>
                         <li class="nav-item @@blog__active">
@@ -129,113 +177,134 @@ Author URL: http://w3layouts.com
                     <div class="col-md-2 col-5 protfolio-item hover14 align-self">
                         <a href="assets/images/galery1.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery1.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery1.jpg" width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery2.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery2.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery2.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery3.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery3.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery3.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery4.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery4.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery4.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                    </div> <div class="col-md-2 col-5 protfolio-item hover14 align-self">
+                        <a href="assets/images/t1.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t1.jpg" width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t2.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t2.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t9.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t9.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t8.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t8.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                    </div> <div class="col-md-2 col-5 protfolio-item hover14 align-self">
+                        <a href="assets/images/t5.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t5.jpg" width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t6.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t6.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t7.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t7.jpg"  width="170" height="100" class="radius-image">
+                            </figure>
+                        </a>
+                        <a href="assets/images/t9.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                            <figure>
+                                <img src="assets/images/t9.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                     </div>
                     <div class="col-md-2 col-5 protfolio-item hover14 align-self">
-                        <a href="assets/images/galery5.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                        <a href="assets/images/t10.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery5.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/t10.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
-                        <a href="assets/images/galery6.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                        <a href="assets/images/t11.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery6.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/t11.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
-                        <a href="assets/images/galery7.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                        <a href="assets/images/t12.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery7.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/t12.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
-                        <a href="assets/images/galery8.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                        <a href="assets/images/t13.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery8.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/t13.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                     </div>
                     <div class="col-md-2 col-5 protfolio-item hover14 align-self">
                         <a href="assets/images/galery9.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery9.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery9.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery10.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery10.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery10.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery111.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery111.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery111.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery12.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery12.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery12.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                     </div>
-                    <div>
+                    <div class="col-md-2 col-5 protfolio-item hover14 align-self">
                         <a href="assets/images/galery13.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery13.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery13.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery14.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery14.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery14.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/galery15.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery15.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/galery15.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
-                        <a href="assets/images/galery16.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
+                        <a href="assets/images/t14.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/galery16.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
+                                <img src="assets/images/t14.jpg"  width="170" height="100" class="radius-image">
                             </figure>
                         </a>
                     </div>
-                    <div>
-                        <a href="assets/images/galery17.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
-                            <figure>
-                                <img src="assets/images/galery17.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
-                            </figure>
-                        </a>
-                        <a href="assets/images/galery18.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
-                            <figure>
-                                <img src="assets/images/galery18.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
-                            </figure>
-                        </a>
-                        <a href="assets/images/galery19.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
-                            <figure>
-                                <img src="assets/images/galery19.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
-                            </figure>
-                        </a>
-                        <a href="assets/images/galery20.jpg" data-lightbox="example-set" data-title="lorem ipsum dolor sit amet">
-                            <figure>
-                                <img src="assets/images/galery20.jpg" width="220" height="110" alt="product" class="img-fluid radius-image">
-                            </figure>
-                        </a>
-                    </div>
+                    
 
 
 
@@ -243,6 +312,10 @@ Author URL: http://w3layouts.com
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- footers 20 -->
     <section class="w3l-footers-20">

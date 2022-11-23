@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        #personel {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #personel td, #personel th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #personel tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #personel tr:hover {
+                background-color: #2ecc71;
+                color: #fff;
+            }
+
+            #personel th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #2c3e50;
+                color: white;
+            }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+            button:hover {
+                opacity: 1;
+            }
+
+        /* Float cancel and delete buttons and add an equal width */
+        .cancelbtn, .deletebtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add a color to the cancel button */
+        .cancelbtn {
+            background-color: #ccc;
+            color: black;
+        }
+
+        /* Add a color to the delete button */
+        .deletebtn {
+            background-color: #f44336;
+        }
+
+        /* Add padding and center-align text to the container */
+        .container {
+            padding: 16px;
+            text-align: center;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: #474e5d;
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Modal Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #f44336;
+                cursor: pointer;
+            }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and delete button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn, .deletebtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+        <span class="w3-bar-item w3-right">KırkBir</span>
+    </div>
+
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="/starter/assets/images/41.PNG" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span> <strong>KırkBir</strong></span><br>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a href="admin.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>Anasayfa</a>
+            <a href="admin-blog.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Blog Ekle</a>
+            <a href="admin-duyuru.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Duyuru Ekle</a>
+            <a href="admin-galeri.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i> Galeri</a>
+            <a href="admin-uye.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Üye Ekleme</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-diamond fa-fw"></i>  Üye Listesi</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+        </div>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <table id="personel">
+            <tr>
+                <th>Sıra</th>
+
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Başlangıç Tarihi</th>
+                <th>Bitiş Tarihi</th>
+                <th>Üyelik Tipi</th>
+                <th>İşlemler</th>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Asuman</td>
+                <td>Göldağ</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ünlüsoy</td>
+                <td>Mansur</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cansen</td>
+                <td>Karaburun</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ülküsel</td>
+                <td>Özkahraman</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Funda</td>
+                <td>Sığırcı</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Edibe</td>
+                <td>Farımaz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Uluer</td>
+                <td>Akgül</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Tarımer</td>
+                <td>Zımba</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Şule</td>
+                <td>Alaca</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>Hafız</td>
+                <td>Bayduz</td>
+                <td>29.01.2021</td>
+                <td>29.01.2022</td>
+                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+            </tr>
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content" action="/action_page.php">
+                    <div class="container">
+                        <h1>Üyeyi Sil</h1>
+                        <p>Üyeyi silmek istediğinden emin misin?</p>
+
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Yazgeç</button>
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Sil</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </table>
+</body>
+</html>
