@@ -81,6 +81,43 @@
                 margin-top: 0;
             }
         }
+        /* Popup (arka plan) */
+        .modal {
+            display: none; /* Varsayılan olarak gizlidir */
+            position: fixed; /* Yerinde kal */
+            z-index: 1; /* Üstte */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ful Genişlik */
+            height: 100%; /* Ful Yükseklik */
+            overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+            background-color: rgb(0,0,0); /* Yedek renk */
+            background-color: rgba(0,0,0,0.4); /* Siyah w / opaklık */
+        }
+
+        /* İçerik / Kutu */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* % 15 üstten ve ortalanmış */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
+        }
+
+        /* Kapat Düğmesi */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
     </style>
 </head>
 <body class="w3-light-grey">
@@ -91,7 +128,7 @@
         <span class="w3-bar-item w3-right">KırkBir</span>
     </div>
 
-    
+
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
         <br>
@@ -117,7 +154,16 @@
             <a href="admin-duyuru.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Duyuru Ekle</a>
             <a href="admin-galeri.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i> Galeri</a>
             <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Üye Ekleme</a>
-  
+            <a href="#" id="myBtn" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Çıkış</a>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Çıkış yapmak istiyor musunuz ?</p>
+                    <button onclick="window.location.href = 'admin-uye.html';">Hayır</button>
+                    <button onclick="window.location.href = 'admin-login.html';">Evet</button>
+                </div>
+            </div>
             <a href="admin-uye-listesi.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Üye Listesi</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
@@ -158,7 +204,7 @@
                     <div class="col-75" style="width:200px">
                         <select>
                             <option value="0">Üyelik Süresi:</option>
-                            <option value="1">1 Ay</option>           
+                            <option value="1">1 Ay</option>
                             <option value="3">3 Ay</option>
                             <option value="4">6 Ay</option>
                             <option value="5">12 Ay</option>
@@ -205,8 +251,6 @@
             </form>
         </div>
         <!-- Footer -->
-       
-
         <!-- End page content -->
     </div>
 
@@ -234,6 +278,32 @@
             overlayBg.style.display = "none";
         }
     </script>
+    <script>
+        // Popup Al
+        var modal = document.getElementById('myModal');
 
+        // Kipi açan düğmeyi al
+        var btn = document.getElementById("myBtn");
+
+        // Kipi kapatan <span> öğesini edinin
+        var span = document.getElementsByClassName("close")[0];
+
+        // Kullanıcı düğmeyi tıklattığında
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Kullanıcı <span> (x) düğmesini tıkladığında, popup
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

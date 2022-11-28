@@ -211,6 +211,43 @@
                 width: 100%;
             }
         }
+        /* Popup (arka plan) */
+        .modal {
+            display: none; /* Varsayılan olarak gizlidir */
+            position: fixed; /* Yerinde kal */
+            z-index: 1; /* Üstte */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ful Genişlik */
+            height: 100%; /* Ful Yükseklik */
+            overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+            background-color: rgb(0,0,0); /* Yedek renk */
+            background-color: rgba(0,0,0,0.4); /* Siyah w / opaklık */
+        }
+
+        /* İçerik / Kutu */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* % 15 üstten ve ortalanmış */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
+        }
+
+        /* Kapat Düğmesi */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
     </style>
 </head>
 <body class="w3-light-grey">
@@ -248,7 +285,16 @@
             <a href="admin-galeri.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i> Galeri</a>
             <a href="admin-uye.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Üye Ekleme</a>
             <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-diamond fa-fw"></i>  Üye Listesi</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>Çıkış Yap</a>    
+            <a href="#" id="myBtn" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Çıkış</a>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Çıkış yapmak istiyor musunuz ?</p>
+                    <button onclick="window.location.href = 'admin-uye-listesi.html';">Hayır</button>
+                    <button onclick="window.location.href = 'admin-login.html';">Evet</button>
+                </div>
+            </div>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
 
@@ -319,7 +365,8 @@
                 <td>Sığırcı</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>6</td>
@@ -327,7 +374,8 @@
                 <td>Farımaz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>7</td>
@@ -335,7 +383,8 @@
                 <td>Akgül</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>8</td>
@@ -343,7 +392,8 @@
                 <td>Zımba</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>9</td>
@@ -351,7 +401,8 @@
                 <td>Alaca</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>10</td>
@@ -359,7 +410,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>11</td>
@@ -367,7 +419,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>12</td>
@@ -375,7 +428,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>13</td>
@@ -383,7 +437,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>14</td>
@@ -391,7 +446,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>15</td>
@@ -399,7 +455,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>16</td>
@@ -407,7 +464,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>17</td>
@@ -415,7 +473,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>18</td>
@@ -423,7 +482,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>19</td>
@@ -431,7 +491,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>20</td>
@@ -439,7 +500,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>21</td>
@@ -447,7 +509,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>22</td>
@@ -455,7 +518,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>23</td>
@@ -463,7 +527,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>24</td>
@@ -471,7 +536,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>25</td>
@@ -479,7 +545,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>26</td>
@@ -487,7 +554,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>27</td>
@@ -495,7 +563,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>28</td>
@@ -503,7 +572,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>29</td>
@@ -511,7 +581,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <tr>
                 <td>30</td>
@@ -519,7 +590,8 @@
                 <td>Bayduz</td>
                 <td>29.01.2021</td>
                 <td>29.01.2022</td>
-                 <td>Kamu</td><td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
+                <td>Kamu</td>
+                <td><button onclick="document.getElementById('id01').style.display='block'">Sil</button><button>Güncelle</button></td>
             </tr>
             <div id="id01" class="modal">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
@@ -540,6 +612,33 @@
                 var modal = document.getElementById('id01');
 
                 // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+            <script>
+                // Popup Al
+                var modal = document.getElementById('myModal');
+
+                // Kipi açan düğmeyi al
+                var btn = document.getElementById("myBtn");
+
+                // Kipi kapatan <span> öğesini edinin
+                var span = document.getElementsByClassName("close")[0];
+
+                // Kullanıcı düğmeyi tıklattığında
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // Kullanıcı <span> (x) düğmesini tıkladığında, popup
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
